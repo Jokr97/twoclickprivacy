@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.8" group="system" method="upgrade">
+	<name>Twoclickprivacy</name>
+	<creationDate>2021-03-31</creationDate>
+	<author>Lukas Schneider</author>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0-alpha1.1</version>
+	<description></description>
+	<files>
+		<filename plugin="twoclickprivacy">twoclickprivacy.php</filename>
+	</files>
+</extension>
