@@ -1,0 +1,29 @@
+{
+  "name": "twoclickprivacy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass ./plg_SystemTwoclickprivacy/src/css -o ./plg_SystemTwoclickprivacy/css --output-style compressed",
+    "scss:watch": "npm run scss && node-sass ./plg_SystemTwoclickprivacy/src/css -wo ./plg_SystemTwoclickprivacy/css --output-style compressed",
+    "babel": "babel ./plg_SystemTwoclickprivacy/src/js -d ./plg_SystemTwoclickprivacy/js",
+    "build": "npm run scss && npm run babel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jokr97/twoclickprivacy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jokr97/twoclickprivacy/issues"
+  },
+  "homepage": "https://github.com/Jokr97/twoclickprivacy#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-minify": "^0.5.1",
+    "node-sass": "^5.0.0"
+  }
+}
