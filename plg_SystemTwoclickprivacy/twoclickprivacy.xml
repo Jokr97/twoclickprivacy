@@ -4,7 +4,7 @@
 	<creationDate>2021-03-31</creationDate>
 	<author>Lukas Schneider</author>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.0-alpha1.8</version>
+	<version>1.0-alpha1.11</version>
 	<description></description>
 	<files>
 		<filename plugin="twoclickprivacy">twoclickprivacy.php</filename>
