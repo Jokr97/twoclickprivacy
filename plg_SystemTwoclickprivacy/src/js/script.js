@@ -26,15 +26,12 @@
             let video_w = video_frame.clientWidth;
             let video_h = video_frame.clientHeight;
             let wall = document.createElement('article');
-            
-            if(window.frames.length !== 0){
-                // Prevent iframes from loading remote content
-                if (typeof (window.frames[0].stop) === 'undefined'){
-                    setTimeout(function() {window.frames[0].execCommand('Stop');},1000);
-                }else{
-                    setTimeout(function() {window.frames[0].stop();},1000);
-                }
-            }
+
+            if (typeof (video_frame.contentWindow.stop) === 'undefined'){
+                video_frame.contentWindow.document.execCommand('Stop');
+              }else{
+                  video_frame.contentWindow.stop();
+              }
 
             let video_platform = video_src.match(/vimeo/) == null ? 'youtube' : 'vimeo';
             let video_id = video_src.match(/(embed|video)\/([^?\s]*)/)[2];
@@ -43,7 +40,7 @@
             wall.setAttribute('data-index', i);
 
             if (video_w && video_h) {
-                wall.setAttribute('style', 'width:'+video_w+'px;height:'+video_h+'px');
+                wall.setAttribute('style', `width: ${video_w}px; height: ${video_h}px`);
             }
 
             wall.innerHTML = text[video_platform].replace(/\%id\%/g, video_id);

@@ -3,7 +3,7 @@
  * @package    TWOCLICKPRIVACY
  *
  * @author     Lukas Schneider
- * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @license    MIT License
  */
 
 use Joomla\CMS\Application\CMSApplication;
@@ -16,7 +16,6 @@ class plgSystemTwoclickprivacy extends CMSPlugin
     function __construct( $subject, $params )
 	{
 		parent::__construct($subject, $params);
-
     }
     
 	function onBeforeCompileHead()
