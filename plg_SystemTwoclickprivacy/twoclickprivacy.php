@@ -24,8 +24,29 @@ class plgSystemTwoclickprivacy extends CMSPlugin
         $document = JFactory::getDocument();
 
         if ($app->isSite()){
-            $document->addScript(Juri::base() . 'media/plg_twocklickprivacy/js/script.js');
-            $document->addStyleSheet(Juri::base() . 'media/plg_twocklickprivacy/css/styles.css');
+            $document->addScript(Juri::base() . 'media/plg_twoclickprivacy/js/script.js');
+
+            $fontcolor = $this->params->get("fontcolor", "#333");
+            $bordercolor = $this->params->get("bordercolor", "#ccc");
+            $backgroundcolor = $this->params->get("backgroundcolor", "#eee");
+
+            $buttoncolor = $this->params->get("buttoncolor", "#eee");
+            $buttoncolorhover = $this->params->get("buttoncolorhover", "#444");
+            $buttoncolorbackground = $this->params->get("buttoncolorbackground", "#666");
+
+            $color_override = "
+            :root{
+                --twoclickprivacy-font-color: " . $fontcolor . ";
+                --twoclickprivacy-border-color: " . $bordercolor . ";
+                --twoclickprivacy-background-color: " . $backgroundcolor . ";
+                
+                --twoclickprivacy-button-color: " . $buttoncolor .";
+                --twoclickprivacy-button-color-hover: " . $buttoncolorhover . ";
+                --twoclickprivacy-button-background-color: " . $buttoncolorbackground . ";
+            }";
+
+            $document->addStyleDeclaration($color_override);
+            $document->addStyleSheet(Juri::base() . 'media/plg_twoclickprivacy/css/styles.css');
         }
     }
 }

@@ -9,8 +9,25 @@
 	<files>
 		<filename plugin="twoclickprivacy">twoclickprivacy.php</filename>
 	</files>
-	<media folder="media" destination="plg_twocklickprivacy">
+	<media folder="media" destination="plg_twoclickprivacy">
 		<folder>css</folder>
 		<folder>js</folder>
 	</media>
+	<languages folder="lang">
+		<language tag="de-DE">de-DE/de-DE.plg_system_twoclickprivacy.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_system_twoclickprivacy.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="PLG_SYSTEM_TWOCLICKPRIVACY_OPTIONS_LBL">
+				<field name="fontcolor" type="color" default="#333" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_FONTCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_FONTCOLOR_DESC" />
+				<field name="bordercolor" type="color" default="#ccc" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BORDERCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BORDERCOLOR_DESC" />
+				<field name="backgroundcolor" type="color" default="#eee" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BACKGROUNDCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BACKGROUNDCOLOR_DESC" />
+
+				<field name="buttoncolor" type="color" default="#eee" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLOR_DESC" />
+				<field name="buttoncolorhover" type="color" default="#444" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORHOVER_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORHOVER_DESC" />
+				<field name="buttoncolorbackground" type="color" default="#666" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORBACKGROUND_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORBACKGROUND_DESC" />
+			</fieldset>
+		</fields>
+	</config>
 </extension>
