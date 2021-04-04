@@ -17,9 +17,10 @@
 		<language tag="de-DE">de-DE/de-DE.plg_system_twoclickprivacy.ini</language>
 		<language tag="de-DE">de-DE/de-DE.plg_system_twoclickprivacy.sys.ini</language>
 	</languages>
+	<scriptfile>twoclickprivacy.script.php</scriptfile>
 	<config>
 		<fields name="params">
-			<fieldset name="options" label="PLG_SYSTEM_TWOCLICKPRIVACY_OPTIONS_LBL">
+			<fieldset name="options" label="PLG_SYSTEM_TWOCLICKPRIVACY_COLOROPTIONS_LBL">
 				<field name="fontcolor" type="color" default="#333" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_FONTCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_FONTCOLOR_DESC" />
 				<field name="bordercolor" type="color" default="#ccc" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BORDERCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BORDERCOLOR_DESC" />
 				<field name="backgroundcolor" type="color" default="#eee" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BACKGROUNDCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BACKGROUNDCOLOR_DESC" />
@@ -27,6 +28,25 @@
 				<field name="buttoncolor" type="color" default="#eee" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLOR_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLOR_DESC" />
 				<field name="buttoncolorhover" type="color" default="#444" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORHOVER_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORHOVER_DESC" />
 				<field name="buttoncolorbackground" type="color" default="#666" format="HEX" label="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORBACKGROUND_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_BUTTONCOLORBACKGROUND_DESC" />
+			</fieldset>
+			<fieldset name="texts" label="PLG_SYSTEM_TWOCLICKPRIVACY_TEXTOPTIONS_LBL">
+				<field type="spacer" name="youtubespacer" label="&lt;b&gt;YouTube&lt;/b&gt;&lt;hr/&gt;" />
+				<field name="youtubeheading" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEHEADING_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEHEADING_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEHEADING_DESC" translate_default="true" size="30" />
+				<field name="youtubetext" type="editor" default="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBETEXT_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBETEXT_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBETEXT_DESC" width="200" translate_default="true" filter="safehtml" />
+
+				<field name="youtubelinktext" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTEXT_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTEXT_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTEXT_DESC" translate_default="true" size="30" />
+				<field name="youtubelinktitle" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTITLE_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTITLE_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTITLE_DESC" translate_default="true" size="30" />
+				<field name="youtubebuttontext" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTEXT_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTEXT_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTEXT_DESC" translate_default="true" size="30" />
+				<field name="youtubebuttontitle" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTITLE_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTITLE_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTITLE_DESC" translate_default="true" size="30" />
+
+				<field type="spacer" name="vimeospacer" label="&lt;b&gt;Vimeo&lt;/b&gt;&lt;hr/&gt;" />
+				<field name="vimeoheading" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOHEADING_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOHEADING_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOHEADING_DESC" translate_default="true" size="30" />
+				<field name="vimeotext" type="editor" default="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOTEXT_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOTEXT_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOTEXT_DESC" width="200" translate_default="true" filter="safehtml" />
+				
+				<field name="vimeolinktext" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTEXT_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTEXT_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTEXT_DESC" translate_default="true" size="30" />
+				<field name="vimeolinktitle" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTITLE_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTITLE_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTITLE_DESC" translate_default="true" size="30" />
+				<field name="vimeobuttontext" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTEXT_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTEXT_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTEXT_DESC" translate_default="true" size="30" />
+				<field name="vimeobuttontitle" type="text" default="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTITLE_DEFAULT" label="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTITLE_LBL" description="PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTITLE_DESC" translate_default="true" size="30" />
 			</fieldset>
 		</fields>
 	</config>

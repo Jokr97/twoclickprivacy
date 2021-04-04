@@ -24,6 +24,33 @@ class plgSystemTwoclickprivacy extends CMSPlugin
         $document = JFactory::getDocument();
 
         if ($app->isSite()){
+            $youtubeheading = $this->params->get("youtubeheading");
+            $youtubetext = $this->params->get("youtubetext");
+            $youtubetext = str_replace(array("\r\n", "\r", "\n", "\t"), '', $youtubetext);
+            $youtubelinktitle = $this->params->get("youtubelinktitle");
+            $youtubelinktext = $this->params->get("youtubelinktext");
+            $youtubebuttontitle = $this->params->get("youtubebuttontitle");
+            $youtubebuttontext = $this->params->get("youtubebuttontext");
+
+            $vimeoheading = $this->params->get("vimeoheading");
+            $vimeotext = $this->params->get("vimeotext");
+            $vimeotext = str_replace(array("\r\n", "\r", "\n", "\t"), '', $vimeotext);
+            $vimeolinktitle = $this->params->get("vimeolinktitle");
+            $vimeolinktext = $this->params->get("vimeolinktext");
+            $vimeobuttontitle = $this->params->get("vimeobuttontitle");
+            $vimeobuttontext = $this->params->get("vimeobuttontext");
+
+            $text = "
+            (function(){
+                var text = {
+                    youtube: '<strong>". $youtubeheading . "</strong>" . $youtubetext . "<a class=\"video-link\" href=\"https://youtu.be/%id%\" rel=\"noopener\" target=\"_blank\" title=\"" . $youtubelinktitle . "\">". $youtubelinktext . " https://youtu.be/%id%</a><button title=\"" . $youtubebuttontitle . "\">" . $youtubebuttontext . "</button>',
+                    vimeo: '<strong>" . $vimeoheading . "</strong>" . $vimeotext . "<a class=\"video-link\" href=\"https://vimeo.com/%id%\" rel=\"noopener\" target=\"_blank\" title=\"" . $vimeolinktitle . "\">" . $vimeolinktext . " https://vimeo.com/%id%</a><button title=\"" . $vimeobuttontitle . "\">" . $vimeobuttontext . "</button>'
+                }
+
+               twoclickprivacy(text);
+            })();";
+            
+            $document->addScriptDeclaration($text);
             $document->addScript(Juri::base() . 'media/plg_twoclickprivacy/js/script.js');
 
             $fontcolor = $this->params->get("fontcolor", "#333");
