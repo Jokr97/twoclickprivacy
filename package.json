@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass ./plg_SystemTwoclickprivacy/src/css -o ./plg_SystemTwoclickprivacy/css --output-style compressed",
-    "scss:watch": "npm run scss && node-sass ./plg_SystemTwoclickprivacy/src/css -wo ./plg_SystemTwoclickprivacy/css --output-style compressed",
-    "babel": "babel ./plg_SystemTwoclickprivacy/src/js -d ./plg_SystemTwoclickprivacy/js",
+    "scss": "node-sass ./src/css -o ./plg_SystemTwoclickprivacy/css --output-style compressed",
+    "scss:watch": "npm run scss && node-sass ./src/css -wo ./plg_SystemTwoclickprivacy/css --output-style compressed",
+    "babel": "babel ./src/js -d ./plg_SystemTwoclickprivacy/js",
     "zip": "npm-build-zip --source=plg_SystemTwoclickprivacy/",
     "build": "npm run scss && npm run babel && npm run zip"
   },
