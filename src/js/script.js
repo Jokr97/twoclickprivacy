@@ -13,41 +13,43 @@ function twoclickprivacy(text){
             let video_frame = document.getElementsByTagName('iframe')[0];
             let video_src = video_frame.src;
             
-            // Only process video iframes [youtube|vimeo]
+            /* Only process video iframes [youtube|vimeo] */
             if (video_src.match(/youtube|vimeo/) == null) {
                 return;
             }
-            
-            video_iframes.push(video_frame);
-            let video_w = video_frame.clientWidth;
-            let video_h = video_frame.clientHeight;
-            let wall = document.createElement('article');
 
+            video_iframes.push(video_frame);
+            
             if (typeof (video_frame.contentWindow.stop) === 'undefined'){
                 video_frame.contentWindow.document.execCommand('Stop');
-              }else{
-                  video_frame.contentWindow.stop();
-              }
-
+            }else{
+                video_frame.contentWindow.stop();
+            }
+            
             let video_platform = video_src.match(/vimeo/) == null ? 'youtube' : 'vimeo';
             let video_id = video_src.match(/(embed|video)\/([^?\s]*)/)[2];
-
+            
+            let wall = document.createElement('article');
             wall.setAttribute('class', 'video-wall');
             wall.setAttribute('data-index', i);
-
-            if (video_w && video_h) {
-                wall.setAttribute('style', `width: ${video_w}px; height: ${video_h}px`);
-            }
-
             wall.innerHTML = text[video_platform].replace(/\%id\%/g, video_id);
 
-            video_frame.parentNode.replaceChild(wall, video_frame);
+            let wall_container = document.createElement('div');
+            wall_container.setAttribute('class', 'video-container');
+            wall_container.appendChild(wall);
+
+            video_frame.parentNode.replaceChild(wall_container, video_frame);
 
             document.querySelectorAll('.video-wall button')[i].addEventListener('click', function() {
-                var video_frame = this.parentNode,
-                    index = video_frame.getAttribute('data-index');
+                let video_frame = this.parentNode;
+                
+                let index = video_frame.getAttribute('data-index');
                 video_iframes[index].src = video_iframes[index].src.replace(/www\.youtube\.com/, 'www.youtube-nocookie.com');
-                video_frame.parentNode.replaceChild(video_iframes[index], video_frame);
+
+                let video_container = document.createElement('div');
+                video_container.classList.add('video-container');
+                video_container.appendChild(video_iframes[index]);
+                video_frame.parentNode.replaceChild(video_container, video_frame);
             }, false);
         }
     });
