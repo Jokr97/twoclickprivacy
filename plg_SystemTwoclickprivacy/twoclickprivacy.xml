@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.8" group="system" method="upgrade">
 	<name>Twoclickprivacy</name>
-	<creationDate>2021-04-04</creationDate>
+	<creationDate>2021-04-08</creationDate>
 	<author>Lukas Schneider</author>
 	<authorUrl>https://github.com/Jokr97/twoclickprivacy</authorUrl>
 	<license>MIT License</license>
-	<version>1.0-beta2.0</version>
+	<version>1.0.0</version>
 	<description></description>
 	<files>
 		<filename plugin="twoclickprivacy">twoclickprivacy.php</filename>
