@@ -22,23 +22,24 @@ class plgSystemTwoclickprivacy extends CMSPlugin
 	{
         $app = JFactory::getApplication();
         $document = JFactory::getDocument();
+        $language = JFactory::getLanguage()->load('plg_system_twoclickprivacy', JPATH_ADMINISTRATOR);
 
         if ($app->isSite()){
-            $youtubeheading = $this->params->get("youtubeheading");
-            $youtubetext = $this->params->get("youtubetext");
+            $youtubeheading = $this->params->get("youtubeheading") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEHEADING_DEFAULT');
+            $youtubetext = $this->params->get("youtubetext") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBETEXT_DEFAULT');
             $youtubetext = str_replace(array("\r\n", "\r", "\n", "\t"), '', $youtubetext);
-            $youtubelinktitle = $this->params->get("youtubelinktitle");
-            $youtubelinktext = $this->params->get("youtubelinktext");
-            $youtubebuttontitle = $this->params->get("youtubebuttontitle");
-            $youtubebuttontext = $this->params->get("youtubebuttontext");
+            $youtubelinktitle = $this->params->get("youtubelinktitle") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTITLE_DEFAULT');
+            $youtubelinktext = $this->params->get("youtubelinktext") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBELINKTEXT_DEFAULT');
+            $youtubebuttontitle = $this->params->get("youtubebuttontitle") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTITLE_DEFAULT');
+            $youtubebuttontext = $this->params->get("youtubebuttontext") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEBUTTONTEXT_DEFAULT');
 
-            $vimeoheading = $this->params->get("vimeoheading");
-            $vimeotext = $this->params->get("vimeotext");
+            $vimeoheading = $this->params->get("vimeoheading") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOHEADING_DEFAULT');
+            $vimeotext = $this->params->get("vimeotext") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOTEXT_DEFAULT');
             $vimeotext = str_replace(array("\r\n", "\r", "\n", "\t"), '', $vimeotext);
-            $vimeolinktitle = $this->params->get("vimeolinktitle");
-            $vimeolinktext = $this->params->get("vimeolinktext");
-            $vimeobuttontitle = $this->params->get("vimeobuttontitle");
-            $vimeobuttontext = $this->params->get("vimeobuttontext");
+            $vimeolinktitle = $this->params->get("vimeolinktitle") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTITLE_DEFAULT');
+            $vimeolinktext = $this->params->get("vimeolinktext") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOLINKTEXT_DEFAULT');
+            $vimeobuttontitle = $this->params->get("vimeobuttontitle") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTITLE_DEFAULT');
+            $vimeobuttontext = $this->params->get("vimeobuttontext") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_VIMEOBUTTONTEXT_DEFAULT');
 
             $text = "
             (function(){
