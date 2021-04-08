@@ -9,13 +9,13 @@ function twoclickprivacy(text){
     window.video_iframes = [];
     
     document.addEventListener("DOMContentLoaded", function() {
-        for (var i=0, max = window.frames.length - 1; i <= max; i+=1) {
-            let video_frame = document.getElementsByTagName('iframe')[0];
+        for (var i = window.frames.length - 1; i >= 0; i--) {
+            let video_frame = document.getElementsByTagName('iframe')[i];
             let video_src = video_frame.src;
             
             /* Only process video iframes [youtube|vimeo] */
             if (video_src.match(/youtube|vimeo/) == null) {
-                return;
+                continue;
             }
 
             video_iframes.push(video_frame);
