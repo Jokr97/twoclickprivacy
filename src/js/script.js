@@ -39,6 +39,20 @@ function twoclickprivacy(text){
             wall_container.appendChild(wall);
 
             video_frame.parentNode.replaceChild(wall_container, video_frame);
+            
+            fetch('index.php?option=com_ajax&group=system&plugin=twoclickprivacy&format=json', {
+                method: 'POST',
+                body: JSON.stringify({
+                    id: video_id
+                })
+            })
+            .then(res => res.blob())
+            .then(img => {
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL(img);
+                wall.style.background = 'url(' + imageUrl + ') no-repeat center center';
+                wall.style.backgroundSize = 'cover';
+            });
         }
 
         let wallButtons = document.querySelectorAll('.video-wall button');
