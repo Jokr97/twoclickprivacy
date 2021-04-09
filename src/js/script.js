@@ -39,8 +39,11 @@ function twoclickprivacy(text){
             wall_container.appendChild(wall);
 
             video_frame.parentNode.replaceChild(wall_container, video_frame);
+        }
 
-            document.querySelectorAll('.video-wall button')[i].addEventListener('click', function() {
+        let wallButtons = document.querySelectorAll('.video-wall button');
+        wallButtons.forEach((button) => {
+            button.addEventListener('click', function() {
                 let video_frame = this.parentNode;
                 
                 let index = video_frame.getAttribute('data-index');
@@ -51,6 +54,6 @@ function twoclickprivacy(text){
                 video_container.appendChild(video_iframes[index]);
                 video_frame.parentNode.replaceChild(video_container, video_frame);
             }, false);
-        }
+        });
     });
 }
