@@ -1,3 +1,6 @@
+$breakpoint-sm: 600px;
+$breakpoint-md: 900px;
+
 :root{
   --twoclickprivacy-font-color: #333;
   --twoclickprivacy-border-color: #ccc;
@@ -13,17 +16,25 @@ iframe {
 }
 .video-wall {
   position: relative;
-  font: 400 1em/1.46 Helvetica, Arial, sans-serif;
+  font-weight: 400;
   color: var(--twoclickprivacy-font-color);
   display: inline-block;
-  min-height: 18em;
-  min-width: 28em;
   margin: 0;
   background-color: var(--twoclickprivacy-background-color);
   box-sizing: border-box;
   border: 1.5em solid var(--twoclickprivacy-border-color);
   padding: 1em;
   box-sizing: border-box;
+
+  @media screen and (max-width: $breakpoint-md) {
+    border-width: 1em;
+    font-size: 0.8em;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    border-width: 0.8em;
+    font-size: 0.6em;
+  }
 
   strong{
     display: block;
@@ -64,7 +75,8 @@ iframe {
     -webkit-appearance: none;
     cursor: pointer;
     color: var(--twoclickprivacy-button-color);
-    font: 700 0.8em/1.2 Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.8em;
     display: block;
     width: 11.5em;
     height: 4.25em;
