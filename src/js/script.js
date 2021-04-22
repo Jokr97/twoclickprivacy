@@ -48,10 +48,14 @@ function twoclickprivacy(text){
             })
             .then(res => res.blob())
             .then(img => {
+                let videoElement = document.createElement('div');
+                videoElement.setAttribute('class', 'bg-image');
+                
                 var urlCreator = window.URL || window.webkitURL;
                 var imageUrl = urlCreator.createObjectURL(img);
-                wall.style.background = 'url(' + imageUrl + ') no-repeat center center';
-                wall.style.backgroundSize = 'cover';
+                videoElement.style.background = 'url(' + imageUrl + ') no-repeat center center';
+                videoElement.style.backgroundSize = 'cover';
+                wall.appendChild(videoElement);
             });
         }
 

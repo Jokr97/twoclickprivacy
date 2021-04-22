@@ -44,8 +44,8 @@ class plgSystemTwoclickprivacy extends CMSPlugin
             $text = "
             (function(){
                 var text = {
-                    youtube: '<strong>". $youtubeheading . "</strong>" . $youtubetext . "<a class=\"video-link\" href=\"https://youtu.be/%id%\" rel=\"noopener\" target=\"_blank\" title=\"" . $youtubelinktitle . "\">". $youtubelinktext . " https://youtu.be/%id%</a><button title=\"" . $youtubebuttontitle . "\">" . $youtubebuttontext . "</button>',
-                    vimeo: '<strong>" . $vimeoheading . "</strong>" . $vimeotext . "<a class=\"video-link\" href=\"https://vimeo.com/%id%\" rel=\"noopener\" target=\"_blank\" title=\"" . $vimeolinktitle . "\">" . $vimeolinktext . " https://vimeo.com/%id%</a><button title=\"" . $vimeobuttontitle . "\">" . $vimeobuttontext . "</button>'
+                    youtube: '<div class=\"wall-content\"><strong>". $youtubeheading . "</strong>" . $youtubetext . "<a class=\"video-link\" href=\"https://youtu.be/%id%\" rel=\"noopener\" target=\"_blank\" title=\"" . $youtubelinktitle . "\">". $youtubelinktext . " https://youtu.be/%id%</a><button title=\"" . $youtubebuttontitle . "\">" . $youtubebuttontext . "</button></div>',
+                    vimeo: '<div class=\"wall-content\"><strong>" . $vimeoheading . "</strong>" . $vimeotext . "<a class=\"video-link\" href=\"https://vimeo.com/%id%\" rel=\"noopener\" target=\"_blank\" title=\"" . $vimeolinktitle . "\">" . $vimeolinktext . " https://vimeo.com/%id%</a><button title=\"" . $vimeobuttontitle . "\">" . $vimeobuttontext . "</button></div>'
                 }
 
                twoclickprivacy(text);
