@@ -4,7 +4,7 @@
 	<creationDate>2021-04-08</creationDate>
 	<author>Lukas Schneider</author>
 	<authorUrl>https://github.com/Jokr97/twoclickprivacy</authorUrl>
-	<license>MIT License</license>
+	<license>GNU General Public License v3.0</license>
 	<version>1.0.0</version>
 	<description>This plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.</description>
 	<files>

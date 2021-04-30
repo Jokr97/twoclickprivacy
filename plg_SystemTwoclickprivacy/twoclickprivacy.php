@@ -3,7 +3,7 @@
  * @package    TWOCLICKPRIVACY
  *
  * @author     Lukas Schneider
- * @license    MIT License
+ * @license    GNU General Public License v3.0
  */
 
 use Joomla\CMS\Application\CMSApplication;
