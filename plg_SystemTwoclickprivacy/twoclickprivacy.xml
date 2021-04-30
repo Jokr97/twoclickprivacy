@@ -6,7 +6,7 @@
 	<authorUrl>https://github.com/Jokr97/twoclickprivacy</authorUrl>
 	<license>MIT License</license>
 	<version>1.0.0</version>
-	<description></description>
+	<description>This plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.</description>
 	<files>
 		<filename plugin="twoclickprivacy">twoclickprivacy.php</filename>
 	</files>
