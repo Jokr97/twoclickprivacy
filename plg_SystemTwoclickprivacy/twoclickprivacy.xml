@@ -8,7 +8,7 @@
 	<version>1.0.0</version>
 	<description>This plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.</description>
 	<files>
-		<filename plugin="twoclickprivacy">twoclickprivacy.php</filename>
+		<filename plugin="plg_SystemTwoclickprivacy">twoclickprivacy.php</filename>
 	</files>
 	<media folder="media" destination="plg_twoclickprivacy">
 		<folder>css</folder>
@@ -53,4 +53,8 @@
 			</fieldset>
 		</fields>
 	</config>
+
+	<updateservers>
+		<server type="extension" name="TwoClickPrivacy Update">https://raw.githubusercontent.com/jokr97/twoclickprivacy/main/manifest.xml</server>
+	</updateservers> 
 </extension>
