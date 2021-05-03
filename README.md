@@ -2,7 +2,7 @@
 
 This Joomla!-Plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.
 
-No additional steps other than installation and activation in Joomla" are required. The script will detect embedded YouTube- and Vimeo-videos and hide them.
+No additional steps other than installation and activation in Joomla! are required. The script will detect embedded YouTube- and Vimeo-videos and hide them.
 
 However you can modify the texts and colors shown when the video is hidden in the Joomla!-Backend if you like.
 
