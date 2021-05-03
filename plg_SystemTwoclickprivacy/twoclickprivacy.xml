@@ -55,6 +55,6 @@
 	</config>
 
 	<updateservers>
-		<server type="extension" name="TwoClickPrivacy Update">https://raw.githubusercontent.com/jokr97/twoclickprivacy/main/manifest.xml</server>
+		<server type="extension" name="TwoClickPrivacy Update">https://raw.githubusercontent.com/jokr97/twoclickprivacy/main/update.xml</server>
 	</updateservers> 
 </extension>
