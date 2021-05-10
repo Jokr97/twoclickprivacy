@@ -8,19 +8,19 @@
 	<version>1.1.0</version>
 	<description>This plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.</description>
 	<files>
-		<filename plugin="plg_SystemTwoclickprivacy">twoclickprivacy.php</filename>
+		<filename plugin="plg_SystemTwoclickprivacy">plg_SystemTwoclickprivacy.php</filename>
 	</files>
 	<media folder="media" destination="plg_twoclickprivacy">
 		<folder>css</folder>
 		<folder>js</folder>
 	</media>
 	<languages folder="lang">
-		<language tag="en-GB">en-GB/en-GB.plg_system_twoclickprivacy.ini</language>
-		<language tag="en-GB">en-GB/en-GB.plg_system_twoclickprivacy.sys.ini</language>
-		<language tag="de-DE">de-DE/de-DE.plg_system_twoclickprivacy.ini</language>
-		<language tag="de-DE">de-DE/de-DE.plg_system_twoclickprivacy.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_plg_SystemTwoclickprivacy.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_plg_SystemTwoclickprivacy.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_system_plg_SystemTwoclickprivacy.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_system_plg_SystemTwoclickprivacy.sys.ini</language>
 	</languages>
-	<scriptfile>twoclickprivacy.script.php</scriptfile>
+	<scriptfile>plg_SystemTwoclickprivacy.script.php</scriptfile>
 	<config>
 		<fields name="params">
 			<fieldset name="options" label="PLG_SYSTEM_TWOCLICKPRIVACY_COLOROPTIONS_LBL">
