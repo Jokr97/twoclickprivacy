@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.8" group="system" method="upgrade">
 	<name>Twoclickprivacy</name>
-	<creationDate>2021-04-08</creationDate>
+	<creationDate>2021-05-10</creationDate>
 	<author>Lukas Schneider</author>
 	<authorUrl>https://github.com/Jokr97/twoclickprivacy</authorUrl>
 	<license>GNU General Public License v3.0</license>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<description>This plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.</description>
 	<files>
 		<filename plugin="plg_SystemTwoclickprivacy">twoclickprivacy.php</filename>
