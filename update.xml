@@ -2,7 +2,7 @@
 	<update>
 		<name>Twoclickprivacy</name>
 		<description>This plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.</description>
-		<element>twoclickprivacy</element>
+		<element>plg_SystemTwoclickprivacy</element>
 		<type>plugin</type>
 		<folder>system</folder>
 		<client>0</client>
