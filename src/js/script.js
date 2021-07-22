@@ -18,7 +18,7 @@ function twoclickprivacy(text){
                 continue;
             }
 
-            video_iframes.push(video_frame);
+            video_iframes[i] = video_frame;
             
             if (typeof (video_frame.contentWindow.stop) === 'undefined'){
                 video_frame.contentWindow.document.execCommand('Stop');

@@ -6,9 +6,9 @@
 		<type>plugin</type>
 		<folder>system</folder>
 		<client>0</client>
-		<version>1.1.1</version>
+		<version>1.1.2</version>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/Jokr97/twoclickprivacy/releases/download/1.1.1/plg_twoclickprivacy_1.1.1.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/Jokr97/twoclickprivacy/releases/download/1.1.2/plg_twoclickprivacy_1.1.2.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
