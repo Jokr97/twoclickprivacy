@@ -26,7 +26,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-minify": "^0.5.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.1",
     "npm-build-zip": "^1.0.3"
   }
 }
