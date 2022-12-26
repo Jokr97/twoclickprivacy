@@ -11,7 +11,7 @@ use Joomla\CMS\Plugin\CMSPlugin;
 
 defined('_JEXEC') or die;
 
-class plgSystemPlg_SystemTwoclickprivacy extends CMSPlugin
+class plgSystemTwoclickprivacy extends CMSPlugin
 {
     function __construct( $subject, $params )
 	{
@@ -24,7 +24,7 @@ class plgSystemPlg_SystemTwoclickprivacy extends CMSPlugin
         $document = JFactory::getDocument();
         $language = JFactory::getLanguage()->load('plg_system_plg_systemtwoclickprivacy', JPATH_ADMINISTRATOR);
 
-        if ($app->isSite()){
+        if ($app->isClient('site')){
             $youtubeheading = $this->params->get("youtubeheading") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBEHEADING_DEFAULT');
             $youtubetext = $this->params->get("youtubetext") ?? JText::_('PLG_SYSTEM_TWOCLICKPRIVACY_YOUTUBETEXT_DEFAULT');
             $youtubetext = str_replace(array("\r\n", "\r", "\n", "\t"), '', $youtubetext);

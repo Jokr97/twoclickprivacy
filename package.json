@@ -1,14 +1,14 @@
 {
   "name": "plg_twoclickprivacy",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass ./src/css -o ./plg_SystemTwoclickprivacy/css --output-style compressed",
-    "scss:watch": "npm run scss && node-sass ./src/css -wo ./plg_SystemTwoclickprivacy/css --output-style compressed",
-    "babel": "babel ./src/js -d ./plg_SystemTwoclickprivacy/js",
-    "zip": "npm-build-zip --source=plg_SystemTwoclickprivacy/",
+    "scss": "node-sass ./src/css -o ./plg_system_twoclickprivacy/css --output-style compressed",
+    "scss:watch": "npm run scss && node-sass ./src/css -wo ./plg_system_twoclickprivacy/css --output-style compressed",
+    "babel": "babel ./src/js -d ./plg_system_twoclickprivacy/js",
+    "zip": "npm-build-zip --source=plg_system_twoclickprivacy/",
     "build": "npm run scss && npm run babel && npm run zip"
   },
   "repository": {
