@@ -14,5 +14,23 @@ It is recommended that you add a corresponding paragraph to your sites privacy p
 
 Do not rely on this plugin for legal security, the use is at your own risk.
 
+If you want support for browsers with deactivated JavaScript, you need to replace the ```src```-attribute with ```data-src``` like this (example from [https://github.com/a-v-l/dsgvo-video-embed](https://github.com/a-v-l/dsgvo-video-embed))
+
+Starting from
+```html
+  <!-- Example YouTube -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/hZ3w5VMr8gw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Example Vimeo -->
+  <iframe src="https://player.vimeo.com/video/10149605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+```
+
+```src``` replaced with ```data-src```:
+```html
+  <!-- Example YouTube -->
+  <iframe width="560" height="315" data-src="https://www.youtube.com/embed/hZ3w5VMr8gw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Example Vimeo -->
+  <iframe data-src="https://player.vimeo.com/video/10149605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+```
+
 ## Credits:
 - Base functionality derived from [https://github.com/a-v-l/dsgvo-video-embed](https://github.com/a-v-l/dsgvo-video-embed)

@@ -14,7 +14,12 @@ $breakpoint-md: 900px;
 iframe {
   display: inline-block;
 }
-.video-wall {
+iframe[data-src] {
+  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><text text-anchor="middle" alignment-baseline="central" y="50%" font-size="1em" fill="black"><tspan x="50%" dy="-1.5em">To view this video,</tspan><tspan x="50%" dy="1.5em">JavaScript has to be</tspan><tspan x="50%" dy="1.5em">activated</tspan></text></svg>');
+}
+
+.video-wall, 
+iframe[data-src] {
   position: relative;
   font-weight: 400;
   color: var(--twoclickprivacy-font-color);

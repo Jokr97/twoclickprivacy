@@ -11,7 +11,7 @@ function twoclickprivacy(text){
     document.addEventListener("DOMContentLoaded", function() {
         for (var i = window.frames.length - 1; i >= 0; i--) {
             let video_frame = document.getElementsByTagName('iframe')[i];
-            let video_src = video_frame.src;
+            let video_src = video_frame.src || video_frame.dataset.src;
             
             /* Only process video iframes [youtube|vimeo] */
             if (video_src.match(/youtube|vimeo/) == null) {
@@ -19,11 +19,12 @@ function twoclickprivacy(text){
             }
 
             video_iframes[i] = video_frame;
-            
-            if (typeof (video_frame.contentWindow.stop) === 'undefined'){
-                video_frame.contentWindow.document.execCommand('Stop');
-            }else{
-                video_frame.contentWindow.stop();
+            if (!!video_frame.src) {
+                if (typeof (video_frame.contentWindow.stop) === 'undefined'){
+                    video_frame.contentWindow.document.execCommand('Stop');
+                }else{
+                    video_frame.contentWindow.stop();
+                }
             }
             
             let video_platform = video_src.match(/vimeo/) == null ? 'youtube' : 'vimeo';
@@ -46,7 +47,12 @@ function twoclickprivacy(text){
             button.addEventListener('click', function() {
                 let video_frame = this.parentNode;
                 
-                let index = video_frame.getAttribute('data-index');
+                let index = video_frame.dataset.index;
+                if (!!video_iframes[index].dataset.src) {
+                    video_iframes[index].src = video_iframes[index].dataset.src;
+                    video_iframes[index].removeAttribute('data-src');
+                }
+
                 video_iframes[index].src = video_iframes[index].src.replace(/www\.youtube\.com/, 'www.youtube-nocookie.com');
 
                 let video_container = document.createElement('div');
