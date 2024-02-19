@@ -43,4 +43,26 @@
 		<maintainerurl>https://github.com/Jokr97/twoclickprivacy</maintainerurl>
         <targetplatform name="joomla" version="3\.(7|8|9|10|11)|4\.[01234]|5\.0" />
 	</update>
+	<update>
+		<name>Twoclickprivacy</name>
+		<description>This plugin hides embedded videos and reveales them only on click. This prevents the loading of third-party cookies to protect the users privacy.</description>
+		<element>plg_SystemTwoclickprivacy</element>
+		<type>plugin</type>
+		<folder>system</folder>
+		<client>0</client>
+		<version>1.1.5</version>
+  		<changelogurl>https://raw.githubusercontent.com/jokr97/twoclickprivacy/main/changelog.xml</changelogurl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/Jokr97/twoclickprivacy/releases/download/1.1.5/plg_twoclickprivacy_1.1.5.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<infourl title="TwoClickPrivacy GitHub-Repo">
+			https://github.com/jokr97/twoclickprivacy/blob/main/README.md
+		</infourl>
+		<maintainer>Lukas Schneider</maintainer>
+		<maintainerurl>https://github.com/Jokr97/twoclickprivacy</maintainerurl>
+        <targetplatform name="joomla" version="3\.(7|8|9|10|11)|4\.[01234]|5\.0" />
+	</update>
 </updates>
